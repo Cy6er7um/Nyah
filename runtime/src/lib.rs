@@ -1,5 +1,5 @@
 pub mod object;
-pub mod pointer;
+pub mod util;
 pub mod interface;
 pub mod error;
 pub mod function;

@@ -158,7 +158,7 @@ impl<T> Hash for NyahUtilPointer<T> {
 
 #[cfg(test)]
 mod test {
-    use crate::pointer::pointer::NyahUtilPointer;
+    use crate::util::pointer::NyahUtilPointer;
 
     struct Example;
 
