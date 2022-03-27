@@ -2,21 +2,21 @@ use std::fmt::{Debug, Display};
 
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, PartialOrd, Ord, Default)]
-pub struct NyahUtilAny;
+pub struct NyahAny;
 
-impl NyahUtilAny {
+impl NyahAny {
     pub const fn new() -> Self {
-        NyahUtilAny
+        NyahAny
     }
 }
 
-impl Display for NyahUtilAny {
+impl Display for NyahAny {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "Any")
     }
 }
 
-impl Debug for NyahUtilAny {
+impl Debug for NyahAny {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "Any")
     }
