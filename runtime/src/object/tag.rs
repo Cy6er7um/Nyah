@@ -1,4 +1,3 @@
-#[repr(C)]
 #[repr(usize)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 pub enum NyahObjectTag {
