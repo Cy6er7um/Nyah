@@ -1,5 +1,7 @@
 # 🐱 Nyah ( Unfinished )
 
+[![Run tests](https://github.com/EnabledFish/Nyah/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/EnabledFish/Nyah/actions/workflows/run-tests.yml)
+
 A high-speed JIT programming language and its runtime, meow~
 
 ## 🎖️ Status
