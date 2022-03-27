@@ -7,5 +7,3 @@ pub mod class;
 pub mod shared;
 pub mod traits;
 pub mod macros;
-pub mod any;
-pub mod result;

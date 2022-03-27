@@ -4,3 +4,4 @@ pub mod reference;
 pub mod pool;
 pub mod pool_node;
 pub mod any_reference;
+pub mod tag;
