@@ -3,6 +3,8 @@ use std::hash::Hash;
 use std::ops::{Deref, DerefMut};
 use std::ptr;
 
+use crate::util::any_pointer::NyahUtilAnyPointer;
+
 #[repr(C)]
 pub struct NyahUtilPointer<T> {
     pub pointer: *mut T,
@@ -17,10 +19,14 @@ impl<T> NyahUtilPointer<T> {
         }
     }
 
-    pub fn cast<U>(&self) -> Self {
-        Self {
+    pub fn cast<U>(&self) -> NyahUtilPointer<U> {
+        NyahUtilPointer {
             pointer: self.pointer.cast(),
         }
+    }
+
+    pub fn cast_any(&self) -> NyahUtilAnyPointer {
+        self.cast()
     }
 
     pub fn is_null(&self) -> bool {

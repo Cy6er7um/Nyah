@@ -8,6 +8,8 @@ A high-speed JIT programming language and its runtime, meow~
 
 Nyah is not currently available, I will slowly implement all its basic features.
 
+Usually, every day I make some commits to this project.
+
 ## 📚 Documents
 
 Here are some documents which can help you learn more about Nyah.
