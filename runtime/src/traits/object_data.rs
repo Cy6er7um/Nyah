@@ -9,13 +9,13 @@ mod test {
     use crate::traits::object_data::NyahObjectData;
 
     #[derive(Clone)]
-    struct ExampleDefaultImplement;
+    struct Example;
 
-    impl NyahObjectData for ExampleDefaultImplement {}
+    impl NyahObjectData for Example {}
 
     #[test]
     fn test_default_implement() {
-        let instance = ExampleDefaultImplement;
+        let instance = Example;
         let compare_result = instance.nyah_data_equal(&instance.clone());
         assert_eq!(compare_result, false);
     }
