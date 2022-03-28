@@ -1,3 +1,5 @@
+use std::fmt::{Debug, Display, Pointer};
+
 use libffi::high::{Arg, call, CodePtr, CType};
 
 use crate::util::any_pointer::NyahUtilAnyPointer;
@@ -54,6 +56,24 @@ impl<T> From<*mut T> for NyahFunctionPointer {
 impl<T> From<*const T> for NyahFunctionPointer {
     fn from(pointer: *const T) -> Self {
         (pointer as *mut T).into()
+    }
+}
+
+impl Display for NyahFunctionPointer {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "<FunctionPointer at {:p}>", self.pointer)
+    }
+}
+
+impl Debug for NyahFunctionPointer {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        Display::fmt(self, f)
+    }
+}
+
+impl Pointer for NyahFunctionPointer {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        Pointer::fmt(&self.pointer, f)
     }
 }
 

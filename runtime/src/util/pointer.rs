@@ -3,6 +3,8 @@ use std::fmt::{Debug, Display, Pointer};
 use std::hash::Hash;
 use std::ops::{Deref, DerefMut};
 use std::ptr;
+use crate::traits::data_equal::NyahDataEqual;
+use crate::traits::pointer_equal::NyahPointerEqual;
 
 use crate::util::any_pointer::NyahUtilAnyPointer;
 
@@ -152,6 +154,18 @@ impl<T> Ord for NyahUtilPointer<T> {
         self.pointer.cmp(
             &other.pointer.cast()
         )
+    }
+}
+
+impl<T> NyahPointerEqual for NyahUtilPointer<T> {
+    fn nyah_pointer_equal(&self, other: &Self) -> bool {
+        self.pointer == other.pointer
+    }
+}
+
+impl<T: Eq> NyahDataEqual for NyahUtilPointer<T> {
+    fn nyah_data_equal(&self, _other: &Self) -> bool {
+        self.deref().eq(&_other.deref())
     }
 }
 
