@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use std::fmt::{Debug, Display, Pointer};
 use std::hash::Hash;
 use std::ops::{Deref, DerefMut};
@@ -137,6 +138,22 @@ impl<LT, RT> PartialEq<NyahUtilPointer<RT>> for NyahUtilPointer<LT> {
 }
 
 impl<T> Eq for NyahUtilPointer<T> {}
+
+impl<LT, RT> PartialOrd<NyahUtilPointer<RT>> for NyahUtilPointer<LT> {
+    fn partial_cmp(&self, other: &NyahUtilPointer<RT>) -> Option<Ordering> {
+        self.pointer.partial_cmp(
+            &other.pointer.cast()
+        )
+    }
+}
+
+impl<T> Ord for NyahUtilPointer<T> {
+    fn cmp(&self, other: &Self) -> Ordering {
+        self.pointer.cmp(
+            &other.pointer.cast()
+        )
+    }
+}
 
 impl<T> Pointer for NyahUtilPointer<T> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
