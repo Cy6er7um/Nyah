@@ -1,3 +1,5 @@
+use libffi::high::{Arg, call, CodePtr, CType};
+
 use crate::util::any_pointer::NyahUtilAnyPointer;
 use crate::util::pointer::NyahUtilPointer;
 
@@ -18,6 +20,17 @@ impl NyahFunctionPointer {
         let pointer = self as *const _ as *const T;
         unsafe {
             *pointer
+        }
+    }
+
+    pub fn call_ffi_high<R: CType>(&self, args: &[Arg]) -> R {
+        unsafe {
+            call::<R>(
+                CodePtr::from_ptr(
+                    self.pointer.pointer.cast()
+                ),
+                args,
+            )
         }
     }
 }
@@ -48,14 +61,14 @@ impl<T> From<*const T> for NyahFunctionPointer {
 mod test {
     use crate::function::pointer::NyahFunctionPointer;
 
-    extern fn plus(a: i32, b: i32) -> i32 {
+    extern fn add(a: i32, b: i32) -> i32 {
         a + b
     }
 
     #[test]
     fn test_cast_function() {
         let function_pointer = NyahFunctionPointer::from(
-            plus as *const u8
+            add as *const u8
         );
         let result = function_pointer
             .cast_function::<extern fn(i32, i32) -> i32>()(1, 2);
