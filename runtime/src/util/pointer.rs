@@ -3,9 +3,9 @@ use std::fmt::{Debug, Display, Pointer};
 use std::hash::Hash;
 use std::ops::{Deref, DerefMut};
 use std::ptr;
+
 use crate::traits::data_equal::NyahDataEqual;
 use crate::traits::pointer_equal::NyahPointerEqual;
-
 use crate::util::any_pointer::NyahUtilAnyPointer;
 
 #[repr(C)]

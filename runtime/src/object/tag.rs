@@ -14,7 +14,7 @@ pub enum NyahObjectTag {
     RefCount = 4,
 }
 
-impl NyahObjectTag{
+impl NyahObjectTag {
     pub fn is_unknown(&self) -> bool {
         self == &NyahObjectTag::Unknown
     }

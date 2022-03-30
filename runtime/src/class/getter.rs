@@ -1,6 +1,6 @@
 use crate::function::pointer::NyahFunctionPointer;
 
-pub struct NyahFunctionModel {
+pub struct NyahClassGetter {
     pub name: String,
-    pub pointer: NyahFunctionPointer,
+    pub function: NyahFunctionPointer,
 }
