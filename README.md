@@ -14,4 +14,6 @@ Usually, every day I make some commits to this project.
 
 Here are some documents which can help you learn more about Nyah.
 
+1. [Runtime Designs](./docs/RuntimeDesigns.md)
+
 _Not completed yet._

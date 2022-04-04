@@ -1,2 +1,18 @@
-[workspace]
-members = ["runtime", "cli"]
+[package]
+name = "nyah"
+version = "0.1.1"
+edition = "2021"
+
+[dependencies]
+thiserror = "1.0"
+
+libffi = "2.0"
+libloading = "0.7"
+
+smallvec = "1.8"
+
+cranelift = "0.82"
+cranelift-module = "0.82"
+cranelift-jit = "0.82"
+
+num-bigint = "0.4"
