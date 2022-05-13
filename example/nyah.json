@@ -1,0 +1,7 @@
+{
+  "subproject": [
+    "helloWorld",
+    "libraryExample",
+    "referDependency"
+  ]
+}

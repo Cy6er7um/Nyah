@@ -1,0 +1,8 @@
+{
+  "name": "referDependency",
+  "dependencies": {
+    "libraryExample": {
+      "path": "../libraryExample"
+    }
+  }
+}

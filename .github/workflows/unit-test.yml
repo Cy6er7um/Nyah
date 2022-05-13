@@ -1,4 +1,4 @@
-name: Run tests
+name: Run unit tests
 
 on:
   push:
@@ -10,11 +10,14 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  BuildAndTest:
+  run_unit_tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
       - name: Build the project
         run: cargo build --verbose
+
       - name: Perform the unit tests
         run: cargo test --verbose

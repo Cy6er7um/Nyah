@@ -1,0 +1,9 @@
+import nyah.console.log;
+import libraryExample.addOne;
+
+func main() {
+    // The implementation of this function can be found in the the project "libraryExample".
+    let value = addOne(1);
+    // The console will print "2".
+    log(value);
+}

@@ -1,0 +1,6 @@
+import nyah.console.log;
+
+func main() {
+    // "log" is a function that can print contents to the console.
+    log("Hello, world!");
+}

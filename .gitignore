@@ -1,8 +1,11 @@
+# Ide
 /.idea/
 /.vscode/
-/target/
 
-**/wasted/
+# Wasted Code
+/**/wasted/
+/**/*.rs.bk
 
-**/Cargo.lock
-**/*.rs.bk
+# Cargo And Rustc
+/**/target/
+/**/Cargo.lock

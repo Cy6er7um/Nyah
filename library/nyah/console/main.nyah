@@ -1,0 +1,11 @@
+pub import stdout;
+
+import stdout.STDOUT;
+
+pub func log(...objects: [impl Display]): ()? {
+    foreach object in objects {
+        // Unwrap the result.
+        // If there is an error, it will be wrapped and then returned.
+        object.display(STDOUT)?;
+    }
+}
