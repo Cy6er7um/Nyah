@@ -1,0 +1,9 @@
+// TODO: Fix the signature of the entryPoint
+#[externName(configReadInclude!("entryPoint.entryPointExternName"))]
+pub func configReadString!("entryPoint.entryPointCallConv") entryPoint() {
+    // configReadInclude!("entryPoint.consoleArgParser")(argv, argc).unwrap();
+    nyahMainFunc().unwrap();
+}
+
+#[importFunc(configReadInclude!("entryPoint.mainFuncExternName"))]
+pub func nyahMainFunc(): ()?;

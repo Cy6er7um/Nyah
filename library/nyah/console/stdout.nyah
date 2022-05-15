@@ -1,3 +1,0 @@
-import @.traits.write.Write;
-
-pub static STDOUT: impl Write;

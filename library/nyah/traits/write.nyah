@@ -1,3 +1,0 @@
-pub trait Write {
-    func write(self, content: string): ()?;
-}

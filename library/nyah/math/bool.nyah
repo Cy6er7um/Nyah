@@ -1,0 +1,2 @@
+#[implType("bool")]
+pub type bool;

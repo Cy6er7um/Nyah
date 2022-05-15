@@ -1,0 +1,2 @@
+#[implType("int32")]
+pub type int32;
