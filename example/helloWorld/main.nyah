@@ -1,6 +1,11 @@
 import nyah.console.log;
 
 func main() {
-    // "log" is a function that can print contents to the console.
+    // "log" is a function that can be used to print contents to the console.
     log("Hello, world!");
+
+    var a: int = 1;
+    var b: int? = a/0;
+
+    log(b?);
 }

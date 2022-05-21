@@ -1,2 +1,0 @@
-#[implType("int64")]
-pub type int64;

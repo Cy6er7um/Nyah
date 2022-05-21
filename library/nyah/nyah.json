@@ -1,27 +1,6 @@
 {
   "name": "nyah",
-  "flag": {
-    "preload": false
-  },
   "config": {
-    "preload": {
-      "enable": true,
-      "version": "v0",
-      "necessary": true
-    },
-    "console": {
-      "enable": true,
-      "stdout": "@.console.stdout.DEFAULT_STDOUT",
-      "stderr": "@.console.stderr.DEFAULT_STDERR",
-      "stdin": "@.console.stdin.DEFAULT_STDIN",
-      "log": "@.console.log.defaultLog"
-    },
-    "entryPoint": {
-      "enable": true,
-      "entryPointExternName": "main",
-      "entryPointCallConv": "entryPoint",
-      "consoleArgParser": "@.console.argParser.defaultArgParser",
-      "mainFuncExternName": "nyah::main"
-    }
+
   }
 }
