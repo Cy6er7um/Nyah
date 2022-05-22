@@ -1,4 +1,0 @@
-// This public function can be called from other projects.
-pub func addOne(value: i32): i32 {
-    return value + 1;
-}
