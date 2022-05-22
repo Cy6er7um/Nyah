@@ -1,0 +1,11 @@
+{
+  "name": "libc",
+  "link": {
+    "libc": {
+      "from": "builtin"
+    }
+  },
+  "config": {
+    "conv": "c"
+  }
+}

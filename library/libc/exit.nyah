@@ -1,0 +1,8 @@
+#[funcImport("exit")]
+pub func configReadString!("conv") exit(status: i32);
+
+#[funcImport("atexit")]
+pub func configReadString!("conv") atexit(handler: func configReadString!("conv") ()): i32;
+
+#[funcImport("abort")]
+pub func configReadString!("conv") abort();
