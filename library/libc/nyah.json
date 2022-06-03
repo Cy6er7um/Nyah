@@ -2,10 +2,13 @@
   "name": "libc",
   "link": {
     "libc": {
-      "from": "builtin"
+      "enabled": true,
+      "from": "builtin",
+      "_from": "Libc is always linked by the compiler."
     }
   },
   "config": {
-    "conv": "c"
+    "conv": "c",
+    "_conv": "Symbols imported from libc will be called following this calling convention."
   }
 }

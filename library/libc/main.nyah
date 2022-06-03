@@ -1,2 +1,13 @@
-pub mod memory;
-pub mod exit;
+// pub mod ctype;
+// pub mod errno;
+// pub mod float;
+// pub mod locale;
+// pub mod math;
+// pub mod setjmp;
+// pub mod signal;
+// pub mod stdarg;
+// pub mod stddef;
+pub mod stdio;
+pub mod stdlib;
+// pub mod string;
+// pub mod time;
