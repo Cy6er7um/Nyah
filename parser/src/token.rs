@@ -94,7 +94,7 @@ mod test {
     use super::Token;
 
     #[test]
-    pub fn test_lexer() {
+    fn test_lexer() {
         let mut lex = Token::lexer(
             r#"
 #[exampleMacro("ExampleString")]
