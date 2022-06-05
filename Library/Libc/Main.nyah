@@ -7,7 +7,7 @@
 // pub mod signal;
 // pub mod stdarg;
 // pub mod stddef;
-pub mod stdio;
-pub mod stdlib;
+pub mod Stdio;
+pub mod Stdlib;
 // pub mod string;
 // pub mod time;

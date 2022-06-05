@@ -10,5 +10,5 @@
   "config": {
     "conv": "c",
     "_conv": "Symbols imported from libc will be called following this calling convention."
-  }a
+  }
 }
