@@ -1,11 +1,11 @@
 #[FuncImport("malloc")]
-pub func ConfigReadString!("conv") malloc(size: int): Pointer;
+public func ConfigReadString!("conv") malloc(size: int): Pointer;
 
 #[FuncImport("calloc")]
-pub func ConfigReadString!("conv") calloc(itemCount: int, itemSize: int): Pointer;
+public func ConfigReadString!("conv") calloc(itemCount: int, itemSize: int): Pointer;
 
 #[FuncImport("realloc")]
-pub func ConfigReadString!("conv") realloc(pointer: Pointer, size: int): Pointer;
+public func ConfigReadString!("conv") realloc(pointer: Pointer, size: int): Pointer;
 
 #[FuncImport("free")]
-pub func ConfigReadString!("conv") free(pointer: Pointer): Pointer;
+public func ConfigReadString!("conv") free(pointer: Pointer): Pointer;

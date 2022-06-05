@@ -1,8 +1,8 @@
 #[FuncImport("exit")]
-pub func ConfigReadString!("conv") exit(status: i32);
+public func ConfigReadString!("conv") exit(status: i32);
 
 #[FuncImport("atexit")]
-pub func ConfigReadString!("conv") atexit(handler: func ConfigReadString!("conv") ()): i32;
+public func ConfigReadString!("conv") atexit(handler: func ConfigReadString!("conv") ()): i32;
 
 #[FuncImport("abort")]
-pub func ConfigReadString!("conv") abort();
+public func ConfigReadString!("conv") abort();
