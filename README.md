@@ -13,7 +13,7 @@ Usually, every day I make some commits to this project.
 ## Example
 
 ```nyah
-import Network.HttpServer;
+use Network.HttpServer;
 
 pub func nyah() {
     var server = new HttpServer();
