@@ -7,7 +7,7 @@
       "_from": "Libc is always linked by the compiler."
     }
   },
-  "config": {
+  "property": {
     "conv": "c",
     "_conv": "Symbols imported from libc will be called following this calling convention."
   }
