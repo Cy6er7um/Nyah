@@ -15,7 +15,7 @@ Usually, every day I make some commits to this project.
 ```nyah
 use Network.HttpServer;
 
-public func nyah() {
+public func main() {
     var server = new HttpServer();
     server.bind(8080);
     server.route("/", func(_request, response) {
