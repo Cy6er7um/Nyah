@@ -8,8 +8,6 @@ An object-oriented programming language, meow~
 
 Nyah is not currently available, I will slowly implement all its basic features.
 
-Usually, every day I make some commits to this project.
-
 ## 🔮 Example
 
 ```nyah
