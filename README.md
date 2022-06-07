@@ -10,7 +10,7 @@ Nyah is not currently available, I will slowly implement all its basic features.
 
 Usually, every day I make some commits to this project.
 
-## Example
+## 🔮 Example
 
 ```nyah
 use Network.HttpServer;
@@ -27,8 +27,10 @@ public func nyah() {
 
 ## 📚 Document
 
-Here are some documents which can help you learn more about Nyah.
+Click [here](Document/README.md) for the documents.
 
-1. [Project - AboutProjectConfig](./Document/Project/AboutProjectConfig.md)
+## 🥳 Special Thanks
 
-_Not completed yet._
+- [Xie-Jason](https://github.com/Xie-Jason)
+
+[![☬](https://komarev.com/ghpvc/?username=EnabledFish&stype=flat&label=ViewedTimes)](https://github.com/EnabledFish)
