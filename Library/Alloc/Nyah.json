@@ -1,0 +1,25 @@
+{
+  "name": "Alloc",
+  "version": {
+    "global": true
+  },
+  "property": {
+    "heap": {
+      "alloc": "malloc",
+      "free": "free",
+      "convention": "c"
+    }
+  },
+  "feature": {
+    "JitEngine": {
+      "property": {
+        "heap": {
+          "alloc": ".Jit.heapAlloc",
+          "free": ".Jit.heapFree",
+          "convention": "NyahFast",
+          "_convention": "'NyahFast' is a built-in convention of 'Cranelift', which does not guarantee ffi feasibility with other conventions."
+        }
+      }
+    }
+  }
+}

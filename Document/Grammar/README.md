@@ -3,7 +3,7 @@
 This folder contains some documentation about the syntax of Nyah.
 
 You can try to learn the syntax of Nyah by reading the code of some programs created in the Nyah language. In general,
-Nyah code files end in `.nyah'.
+Nyah code files end in `.nyah`.
 
 Incidentally, trying to read the compiler and standard library implementations of a language is a good way to learn a
 programming language.

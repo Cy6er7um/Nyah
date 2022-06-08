@@ -1,0 +1,9 @@
+/// # CollectorTag
+///
+/// It marks the garbage collection status of an object.
+#[TypeRepr("UintSize")]
+public enum CollectorTag {
+    Unknown = 0,
+    Static = 1,
+    // TODO: Implement.
+}

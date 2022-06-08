@@ -1,14 +1,17 @@
 {
   "name": "Libc",
+  "version": {
+    "global": true
+  },
+  "property": {
+    "convention": "c",
+    "_convention": "Symbols imported from libc will be called following this calling convention."
+  },
   "link": {
-    "libc": {
+    "LibcBinary": {
       "enabled": true,
       "from": "builtin",
       "_from": "Libc is always linked by the compiler."
     }
-  },
-  "property": {
-    "conv": "c",
-    "_conv": "Symbols imported from libc will be called following this calling convention."
   }
 }
