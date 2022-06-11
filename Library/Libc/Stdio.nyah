@@ -1,3 +1,5 @@
+use Core.Preload.*;
+
 #[FuncImport("exit")]
 public func PropertyReadString!("Convention") exit(status: i32);
 

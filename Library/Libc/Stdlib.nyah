@@ -1,3 +1,5 @@
+use Core.Preload.*;
+
 #[FuncImport("malloc")]
 public func PropertyReadString!("Convention") malloc(size: int): Pointer;
 

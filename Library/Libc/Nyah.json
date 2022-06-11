@@ -3,6 +3,10 @@
   "Version": {
     "Global": true
   },
+  "Preload": false,
+  "Dependency": {
+    "Core": {}
+  },
   "Property": {
     "Convention": "C",
     "_Convention": "Symbols imported from libc will be called following this calling convention."
