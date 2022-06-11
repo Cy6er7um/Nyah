@@ -1,0 +1,7 @@
+{
+  "Name": "Core",
+  "Version": {
+    "Global": true
+  },
+  "Preload": false
+}

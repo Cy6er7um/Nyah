@@ -1,0 +1,21 @@
+{
+  "Name": "Preload",
+  "Version": {
+    "Global": true
+  },
+  "Preload": false,
+  "Dependency": {
+    "Core": {},
+    "Nyah": {}
+  },
+  "Feature": {
+    "CoreOnly": {
+      "Global": true,
+      "Dependency": {
+        "Nyah": {
+          "Enabled": false
+        }
+      }
+    }
+  }
+}
