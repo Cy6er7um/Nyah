@@ -1,4 +1,0 @@
-public module Collector;
-public module Heap;
-public module MethodTable;
-public module Object;

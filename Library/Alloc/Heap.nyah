@@ -1,5 +1,0 @@
-#[FuncImport(PropertyReadString!("heap.alloc"))]
-public func PropertyReadString!("heap.convention") alloc(size: int): Pointer;
-
-#[FuncImport(PropertyReadString!("heap.free"))]
-public func PropertyReadString!("heap.convention") free(size: int): Pointer;
