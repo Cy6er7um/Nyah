@@ -23,61 +23,61 @@ pub enum Token {
     #[regex(r"\.\.\.\.\.\.", priority = 1)]
     Etc6,
 
-    #[regex(r",")]
+    #[token(",")]
     Comma,
 
-    #[regex(r":")]
+    #[token(":")]
     Colon,
 
-    #[regex(r";")]
+    #[token(";")]
     Semicolon,
 
-    #[regex(r"@")]
+    #[token("@")]
     At,
 
-    #[regex(r"#")]
+    #[token("#")]
     Hashtag,
 
-    #[regex(r"=")]
+    #[token("=")]
     Equal,
 
-    #[regex(r"\+")]
+    #[token("+")]
     Add,
 
-    #[regex(r"\-")]
+    #[token("-")]
     Sub,
 
     #[regex(r"\*", priority = 2)]
     Mul,
 
-    #[regex(r"/")]
+    #[token("/")]
     Div,
 
     #[regex(r"\*\*", priority = 1)]
     Exp,
 
-    #[regex(r"%")]
+    #[token(r"%")]
     Mod,
 
-    #[regex(r"|")]
+    #[token(r"|")]
     VerticalBar,
 
-    #[regex(r"\{")]
+    #[token("{")]
     LeftCurlyBrace,
 
-    #[regex(r"\}")]
+    #[token("}")]
     RightCurlyBrace,
 
-    #[regex(r"\[")]
+    #[token("[")]
     LeftSquareBracket,
 
-    #[regex(r"\]")]
+    #[token("]")]
     RightSquareBracket,
 
-    #[regex(r"\(")]
+    #[token("(")]
     LeftParenthesis,
 
-    #[regex(r"\)")]
+    #[token(")")]
     RightParenthesis,
 
     #[regex(r"[ \t\n\f]+")]
