@@ -1,6 +1,6 @@
 # 🐱 Nyah ( Unfinished )
 
-[![Run tests](https://github.com/EnabledFish/Nyah/actions/workflows/UnitTest.yml/badge.svg?branch=main)](https://github.com/EnabledFish/Nyah/actions/workflows/run-tests.yml)
+[![Run tests](https://github.com/EnabledFish/Nyah/actions/workflows/UnitTest.yml/badge.svg?branch=main)](https://github.com/EnabledFish/Nyah/actions/workflows/UnitTest.yml)
 
 An object-oriented programming language, meow~
 
