@@ -41,6 +41,9 @@ pub enum Token {
     #[token("#")]
     Hashtag,
 
+    #[token("?")]
+    QuestionMark,
+
     #[token("=")]
     Equal,
 
@@ -83,7 +86,7 @@ pub enum Token {
     #[token(")")]
     RightParenthesis,
 
-    #[regex(r"[ \t\n\f]+")]
+    #[regex(r"[ \t\n\f\r]+")]
     Whitespace,
 
     #[error]
