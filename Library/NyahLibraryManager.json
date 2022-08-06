@@ -1,9 +1,0 @@
-{
-  "Library": [
-    "Core",
-    "Libc",
-    "Nyah",
-    "Preload"
-  ],
-  "Preload": "Preload"
-}

@@ -10,22 +10,24 @@ Nyah is not currently available, I will slowly implement all its basic features.
 
 ## 🔮 Example
 
-```nyah
-use Network.HttpServer;
+A tasting is available here.
 
-public func main() {
-    var server = new HttpServer();
-    server.bind(8080);
-    server.route("/", func(_request, response) {
+```nyah
+use Nyah.Network.HttpServer;
+
+public func main(): ()? {
+    var server = HttpServer.new();
+    server.route("/", |_request, response| {
         response.write("Hello world!");
     });
-    server.listen();
+    server.bind(8080);
+    server.listen()
 }
 ```
 
 ## 📚 Document
 
-Click [here](Document/README.md) for the documents.
+Click [here](Documents/README.md) for the documents.
 
 ## 🥳 Special Thanks
 
