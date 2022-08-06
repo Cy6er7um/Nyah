@@ -1,4 +1,7 @@
 [workspace]
 members = [
-    "Source/parser",
+    "Compiler/ast",
+    "Compiler/il",
+    "Compiler/parser",
+    "Compiler/Backend/cranelift"
 ]
