@@ -1,0 +1,5 @@
+#[TypeImport("C8")]
+public type C8;
+
+#[TypeImport("C32")]
+public type C32;

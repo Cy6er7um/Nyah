@@ -1,0 +1,12 @@
+use !.Char.C8;
+use !.Char.C32;
+
+public struct CA8 {
+    data: [C8],
+}
+
+public struct CA32 {
+    data: [C32],
+}
+
+// TODO: Implement the methods.

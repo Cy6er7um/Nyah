@@ -1,0 +1,8 @@
+[Project]
+Name = "Nyah"
+Version = "2022.8"
+
+[Features.Default.Dependencies]
+Libc = "~"
+
+[Features.CoreOnly.Dependencies]

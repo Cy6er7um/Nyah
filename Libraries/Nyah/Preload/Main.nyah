@@ -1,0 +1,13 @@
+#![ModuleExport("Preload")]
+#![Preload(false)]
+
+module Core;
+
+public use Core.*;
+
+#[FeatureMatch("Default")]
+public {
+    module Default;
+
+    public use Default.*;
+}
