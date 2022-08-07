@@ -14,7 +14,7 @@ pub enum TypeBuiltin {
     I32 = 4,
     U32 = 5,
     I64 = 6,
-    U66 = 7,
+    U64 = 7,
     F32 = 8,
     F64 = 9,
     C8 = 10,
