@@ -14,6 +14,8 @@ pub enum Operation {
     ConstU16(ValueRef, u16),
     ConstI32(ValueRef, i32),
     ConstU32(ValueRef, u32),
+    ConstI64(ValueRef, i64),
+    ConstU64(ValueRef, u64),
     ConstF32(ValueRef, f32),
     ConstF64(ValueRef, f64),
     ConstChar8(ValueRef, u8),

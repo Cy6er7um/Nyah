@@ -136,30 +136,16 @@ impl CraneliftJitProject {
 
             let mut value_ref_map: HashMap<ValueRef, Value> = HashMap::new();
             for op in &function.body {
-                match &op {
-                    Operation::ConstI8(vr, value) => {
-                        let il_type = project.types.get(vr).ok_or(
-                            String::from("Unknown type reference.")
-                        )?;
-                        match il_type {
-                            Type {
-                                element_count: 1,
-                                element_type: TypeBuiltin::I8,
-                            } => {
-                                let cranelift_value = function_builder.ins().iconst(
-                                    cranelift_types::I8,
-                                    *value as i64,
-                                );
-                                value_ref_map.insert(*vr, cranelift_value);
-                            }
-                            _ => {
-                                return Err(format!("Type not match."));
-                            }
-                        }
-                    }
-                    _ => {
-                        todo!();
-                    }
+                const_value! {
+                    &op, value_ref_map, function_builder, project;
+                    ConstI8, I8, I8;
+                    ConstU8, U8, I8;
+                    ConstI16, I16, I16;
+                    ConstU16, U16, I16;
+                    ConstI32, I32, I32;
+                    ConstU32, U32, I32;
+                    ConstI64, I64, I64;
+                    ConstU64, U64, I64;
                 }
             }
         }
@@ -185,4 +171,40 @@ pub fn il_type_to_cranelift_type(il_type: &Type, target_pointer_type: CraneliftT
     };
 
     element_type.by(il_type.element_count)
+}
+
+#[macro_export]
+macro_rules! const_value {
+    (
+        $op: expr, $value_ref_map:expr, $function_builder: expr, $project: expr;
+        $(
+            $operation: ident, $il_type: ident, $cranelift_type: ident;
+        )*
+    ) => {
+        match $op {
+            $(
+                Operation::$operation(vr, value) => {
+                    let il_type = $project.types.get(vr).ok_or(
+                        String::from("Unknown type reference.")
+                    )?;
+                    match il_type {
+                       Type {
+                            element_count: 1,
+                            element_type: TypeBuiltin::$il_type,
+                       } => {
+                            let cranelift_value = $function_builder.ins().iconst(
+                                cranelift_types::$cranelift_type,
+                                *value as i64,
+                            );
+                            $value_ref_map.insert(*vr, cranelift_value);
+                        }
+                        _ => {
+                            return Err(format!("Type not match."));
+                        }
+                    }
+                }
+            )*
+            _ => {}
+        }
+    };
 }
