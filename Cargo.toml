@@ -3,5 +3,5 @@ members = [
     "Compiler/ast",
     "Compiler/il",
     "Compiler/parser",
-    "Compiler/Backend/cranelift"
+    "Compiler/Backend/cranelift",
 ]

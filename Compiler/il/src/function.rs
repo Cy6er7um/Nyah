@@ -21,4 +21,5 @@ pub struct Function {
 
 pub enum FunctionConv {
     Fast,
+    C,
 }

@@ -1,7 +1,8 @@
 pub type TypeRef = u32;
 
 pub struct Type {
-    pub element_size: u32,
+    // TODO: ??
+    pub element_type: TypeBuiltin,
     pub element_count: u32,
 }
 
@@ -19,4 +20,6 @@ pub enum TypeBuiltin {
     F64 = 9,
     C8 = 10,
     C32 = 11,
+    B8= 12,
+    Pointer = 13,
 }
