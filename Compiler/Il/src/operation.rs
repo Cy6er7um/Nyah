@@ -6,16 +6,29 @@ use crate::static_char_array::StaticCARef;
 use crate::value::ValueRef;
 use crate::variable::VariableRef;
 
+#[derive(Clone)]
 pub enum Operation {
-    ConstI8(ValueRef, i32),
-    ConstU8(ValueRef, i32),
-    ConstI16(ValueRef, i32),
-    ConstU16(ValueRef, i32),
+    ConstI8(ValueRef, i8),
+    ConstU8(ValueRef, u8),
+    ConstI16(ValueRef, i16),
+    ConstU16(ValueRef, u16),
+    ConstI32(ValueRef, i32),
     ConstU32(ValueRef, u32),
     ConstF32(ValueRef, f32),
     ConstF64(ValueRef, f64),
     ConstChar8(ValueRef, u8),
     ConstChar32(ValueRef, char),
+
+    LabelDeclare(u32),
+    LabelJump(u32),
+    LabelJumpIfTrue(u32, ValueRef),
+
+    ParamGet(ValueRef, u32),
+    DynamicParamArrayPointerGet(ValueRef),
+    DynamicParamLengthGet(ValueRef),
+    DynamicKeywordParamNameArrayPointerGet(ValueRef),
+    DynamicKeywordParamObjectArrayPointerGet(ValueRef),
+    DynamicKeywordParamLengthGet(ValueRef),
 
     VariableSet(VariableRef, ValueRef),
     VariableGet(VariableRef, ValueRef),
@@ -32,6 +45,7 @@ pub enum Operation {
 
     Add(ValueRef, ValueRef),
     Sub(ValueRef, ValueRef),
+    Eq(ValueRef, ValueRef),
     // TODO: More operations...
 
     FunctionCall {

@@ -1,14 +1,16 @@
 use std::collections::HashMap;
 use cranelift::codegen::isa::CallConv;
-use cranelift::prelude::{AbiParam, Signature};
+use cranelift::prelude::{AbiParam, FunctionBuilder, FunctionBuilderContext, Signature, Value, InstBuilder};
 use cranelift::prelude::types as cranelift_types;
 use cranelift::prelude::Type as CraneliftType;
 use cranelift_jit::{JITBuilder, JITModule};
 use cranelift_module::{DataId, FuncId, Module};
 use nyah_il::function::{FunctionConv, FunctionRef};
 use nyah_il::global_data::GlobalDataRef;
+use nyah_il::operation::Operation;
 use nyah_il::project::Project;
 use nyah_il::r#type::{Type, TypeBuiltin};
+use nyah_il::value::ValueRef;
 
 pub struct CraneliftJitProject {
     pub module: JITModule,
@@ -124,8 +126,43 @@ impl CraneliftJitProject {
                 *function_ref,
                 function_id.map_err(|error| error.to_string())?,
             );
-        }
 
+            let mut context = module.make_context();
+            let mut function_builder_context = FunctionBuilderContext::new();
+            let mut function_builder = FunctionBuilder::new(
+                &mut context.func,
+                &mut function_builder_context,
+            );
+
+            let mut value_ref_map: HashMap<ValueRef, Value> = HashMap::new();
+            for op in &function.body {
+                match &op {
+                    Operation::ConstI8(vr, value) => {
+                        let il_type = project.types.get(vr).ok_or(
+                            String::from("Unknown type reference.")
+                        )?;
+                        match il_type {
+                            Type {
+                                element_count: 1,
+                                element_type: TypeBuiltin::I8,
+                            } => {
+                                let cranelift_value = function_builder.ins().iconst(
+                                    cranelift_types::I8,
+                                    *value as i64,
+                                );
+                                value_ref_map.insert(*vr, cranelift_value);
+                            }
+                            _ => {
+                                return Err(format!("Type not match."));
+                            }
+                        }
+                    }
+                    _ => {
+                        todo!();
+                    }
+                }
+            }
+        }
 
         Ok(CraneliftJitProject {
             module,

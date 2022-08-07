@@ -1,5 +1,6 @@
 pub type TypeRef = u32;
 
+#[derive(Eq, PartialEq)]
 pub struct Type {
     // TODO: ??
     pub element_type: TypeBuiltin,
@@ -7,6 +8,7 @@ pub struct Type {
 }
 
 #[repr(u32)]
+#[derive(Eq, PartialEq)]
 pub enum TypeBuiltin {
     I8 = 0,
     U8 = 1,
