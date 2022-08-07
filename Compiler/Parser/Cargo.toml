@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 logos = "0.12"
 
-nyah-ast = { path = "../ast" }
+nyah-ast = { path = "../Ast" }

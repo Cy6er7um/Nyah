@@ -9,4 +9,4 @@ cranelift-module = "0.86"
 cranelift-jit = "0.86"
 cranelift-object = "0.86"
 
-nyah-il = { path = "../../il" }
+nyah-il = { path = "../../Il" }

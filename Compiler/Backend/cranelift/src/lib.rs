@@ -127,7 +127,6 @@ impl CraneliftJitProject {
         }
 
 
-
         Ok(CraneliftJitProject {
             module,
         })
