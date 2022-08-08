@@ -5,5 +5,7 @@ edition = "2021"
 
 [dependencies]
 logos = "0.12"
+hashbrown = "0.12.3"
 
 nyah-ast = { path = "../Ast" }
+nyah-il  = { path = "../Il"}

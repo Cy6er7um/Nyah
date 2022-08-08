@@ -1,10 +1,12 @@
 use logos::Logos;
 
 #[derive(Logos, Debug, PartialEq, Eq)]
+/// We use crate 'Logos' construct the TokenStream
 pub enum Token {
+    /// Identifier:[a-zA-Z][a-zA-Z0-9]
     #[regex(r"[_\p{Han}\p{Latin}][_\p{Han}\p{Latin}\p{Number}]*", priority = 1)]
     Identifier,
-
+    /// You can add several underscores to an integer
     #[regex(r"\p{Number}[_\p{Number}]*", priority = 2)]
     Integer,
 
@@ -86,10 +88,8 @@ pub enum Token {
     #[token(")")]
     RightParenthesis,
 
-    #[regex(r"[ \t\n\f\r]+")]
-    Whitespace,
-
     #[error]
+    #[regex(r"[ \t\n\f\r]+" , logos::skip)]
     Error,
 }
 
