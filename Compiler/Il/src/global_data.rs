@@ -1,8 +1,10 @@
 use crate::function::FunctionRef;
 use crate::r#type::TypeRef;
+use serde::{Serialize, Deserialize};
 
 pub type GlobalDataRef = u32;
 
+#[derive(Clone, Serialize, Deserialize)]
 pub struct GlobalData {
     pub name: Option<String>,
     pub r#type: TypeRef,
@@ -11,6 +13,7 @@ pub struct GlobalData {
     pub fill_function_address: Vec<(u32, FunctionRef)>,
 }
 
+#[derive(Clone, Serialize, Deserialize)]
 pub enum GlobalDataInner {
     U8Box(Box<[u8]>),
     U8Vector(Vec<u8>),
