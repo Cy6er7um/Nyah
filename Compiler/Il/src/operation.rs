@@ -5,8 +5,9 @@ use crate::stack::StackRef;
 use crate::static_char_array::StaticCARef;
 use crate::value::ValueRef;
 use crate::variable::VariableRef;
+use serde::{Serialize, Deserialize};
 
-#[derive(Clone)]
+#[derive(Clone, Serialize, Deserialize)]
 pub enum Operation {
     ConstI8(ValueRef, i8),
     ConstU8(ValueRef, u8),

@@ -4,7 +4,9 @@ use crate::function::{Function, FunctionRef};
 use crate::global_data::{GlobalData, GlobalDataRef};
 use crate::r#type::{Type, TypeRef};
 use crate::static_char_array::{StaticCA, StaticCARef};
+use serde::{Serialize, Deserialize};
 
+#[derive(Clone, Serialize, Deserialize)]
 pub struct Project {
     pub functions: HashMap<FunctionRef, Function>,
     pub global_data_map: HashMap<GlobalDataRef, GlobalData>,
