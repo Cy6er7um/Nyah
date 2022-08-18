@@ -4,11 +4,9 @@ use crate::operation::Operation;
 use crate::r#type::TypeRef;
 use crate::value::{Value, ValueRef};
 use crate::variable::{Variable, VariableRef};
-use serde::{Serialize, Deserialize};
 
 pub type FunctionRef = u32;
 
-#[derive(Clone, Serialize, Deserialize)]
 pub struct Function {
     pub name: Option<String>,
     pub conv: FunctionConv,
@@ -21,7 +19,6 @@ pub struct Function {
     pub body: Vec<Operation>,
 }
 
-#[derive(Clone, Serialize, Deserialize)]
 pub enum FunctionConv {
     Fast,
     C,

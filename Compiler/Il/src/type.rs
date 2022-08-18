@@ -1,8 +1,6 @@
-use serde::{Serialize, Deserialize};
-
 pub type TypeRef = u32;
 
-#[derive(Clone, Eq, PartialEq, Debug, Serialize, Deserialize)]
+#[derive(Eq, PartialEq)]
 pub struct Type {
     // TODO: ??
     pub element_type: TypeBuiltin,
@@ -10,7 +8,7 @@ pub struct Type {
 }
 
 #[repr(u32)]
-#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[derive(Eq, PartialEq)]
 pub enum TypeBuiltin {
     I8 = 0,
     U8 = 1,
