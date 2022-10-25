@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    # Command Line Interface
+    "CommandLine",
+    # Components
+    "Components/Analyzer",
+    "Components/Backends",
+    "Components/Debugger",
+    "Components/Libraries",
+    "Components/Parser",
+]

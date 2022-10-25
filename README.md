@@ -7,6 +7,8 @@
 
 Nyah is one language designed for myself.
 
+My ultimate goal is to develop a simple operating system using Nyah and implement POSIX.
+
 ## 🎖️ Status
 
 Nyah is not currently available, I will slowly implement all its basic features.
