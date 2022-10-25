@@ -1,8 +1,11 @@
+<!--suppress ALL -->
+<img src="Resources/1.gif" align="right" width="230" alt="">
+
 # 🐱 Nyah ( Unfinished )
 
 [![Run tests](https://github.com/EnabledFish/Nyah/actions/workflows/UnitTest.yml/badge.svg?branch=main)](https://github.com/EnabledFish/Nyah/actions/workflows/UnitTest.yml)
 
-An object-oriented programming language, meow~
+Nyah is one language designed for myself.
 
 ## 🎖️ Status
 
@@ -12,16 +15,15 @@ Nyah is not currently available, I will slowly implement all its basic features.
 
 A tasting is available here.
 
-```nyah
-use Nyah.Network.HttpServer;
+```Nyah
+use Standard.Console;
 
-public func main(): ()? {
-    var server = HttpServer.new();
-    server.route("/", |_request, response| {
-        response.write("Hello world!");
-    });
-    server.bind(8080);
-    server.listen()
+// The signature of "Main" function is always "func(): ()?",
+// the return type can be emitted.
+func Main() {
+    // '?' means unwrap the result.
+    // If the function returns errors, the program will throw it.
+    Console.WriteLine("Hello, World!")?;
 }
 ```
 

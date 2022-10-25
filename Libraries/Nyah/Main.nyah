@@ -1,9 +1,0 @@
-public module Builtin;
-public module Preload;
-
-#[FeatureMatch("Default")]
-public {
-    public module Entrance;
-    public module Function;
-    public module Network;
-}

@@ -1,7 +1,0 @@
-[workspace]
-members = [
-    "Compiler/Ast",
-    "Compiler/Il",
-    "Compiler/Parser",
-    "Compiler/Backend/Cranelift",
-]

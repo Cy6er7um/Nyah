@@ -1,0 +1,22 @@
+[Project]
+Name = "Standard"
+Version = "2022"
+Global = true
+
+[Features]
+# Features
+Default = { Subfeatures = ["Allocator"] }
+Standalone = { }
+
+# Subfeatures
+Allocator = { Subfeatures = ["Libc"] }
+Console = { Subfeatures = ["Libc"] }
+Debugging = { Subfeatures = ["Console"] }
+EntryPoint = { Subfeatures = ["Console"] }
+String = { Subfeatures = ["Allocator"] }
+
+# Dependencies
+Libc = { Dependencies = ["Libc"] }
+
+[Builtins]
+Standard = false

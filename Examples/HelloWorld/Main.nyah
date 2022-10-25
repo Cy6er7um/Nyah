@@ -1,0 +1,9 @@
+use Standard.Console;
+
+// The signature of "Main" function is always "func(): ()?",
+// the return type can be emitted.
+func Main() {
+    // '?' means unwrap the result.
+    // If the function returns errors, the program will throw it.
+    Console.WriteLine("Hello, World!")?;
+}

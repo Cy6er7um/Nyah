@@ -1,0 +1,21 @@
+use Standard.Console;
+use Standard.Reflection;
+
+func Main() {
+    let typ = Reflection.FromType<Point>()?;
+    // Get the field definitions of type.
+    let fields = typ.GetFields();
+
+    // Print the struct definition to the console.
+    Console.WriteLine($"struct {typ.GetName()} {")?;
+    fields.Iterate(|field| {
+        Console.WriteLine($"    {field.GetName()}: {field.GetType()?.GetName()},")?;
+    });
+    Console.WriteLine("}")?;
+}
+
+// The struct definition.
+struct Point {
+    x: i32,
+    y: i32,
+}
